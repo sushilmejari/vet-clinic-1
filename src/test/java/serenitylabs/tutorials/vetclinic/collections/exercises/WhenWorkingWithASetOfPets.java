@@ -2,37 +2,41 @@ package serenitylabs.tutorials.vetclinic.collections.exercises;
 
 import com.google.common.collect.Sets;
 import org.junit.Test;
+import static org.hamcrest.Matchers.*;
+import static org.junit.Assert.assertThat;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.Matchers.is;
 
 import java.util.Set;
 
 public class WhenWorkingWithASetOfPets {
 
-    @Test
-    public void should_add_Fido_to_the_set_of_pets() {
-        Set<String> names = Sets.newHashSet();
+	@Test
+	public void should_add_Fido_to_the_set_of_pets() {
+		Set<String> names = Sets.newHashSet();
+		names.add("Fido");
+		assertThat(names, hasItem("Fido"));
+		// TODO
+	}
 
-        // TODO
-    }
+	@Test
+	public void a_set_of_pets_should_not_contain_duplicates() {
+		Set<String> names = Sets.newHashSet();
 
-    @Test
-    public void a_set_of_pets_should_not_contain_duplicates() {
-        Set<String> names = Sets.newHashSet();
+		names.add("Fido");
+		names.add("Felix");
+		names.add("Fido");
+		assertThat(names.size(), is(equalTo(2)));
+		// TODO
+	}
 
-        names.add("Fido");
-        names.add("Felix");
-        names.add("Fido");
+	@Test
+	public void adding_several_pets() {
+		Set<String> names = Sets.newHashSet("Fido", "Felix");
 
-        // TODO
-    }
+		names.addAll(Sets.newHashSet("Felix", "Spot"));
+		assertThat(names.size(), is(equalTo(3)));
 
-    @Test
-    public void adding_several_pets() {
-        Set<String> names = Sets.newHashSet("Fido","Felix");
-
-        names.addAll(Sets.newHashSet("Felix","Spot"));
-
-        // TODO
-    }
-
+	}
 
 }

@@ -11,33 +11,34 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class WhenWorkingWithAStackOfPets {
 
-    @Test
-    public void should_store_pets_in_a_stack() {
+	@Test
+	public void should_store_pets_in_a_stack() {
 
-        Deque<Pet> pets = new LinkedList<>();
+		Deque<Pet> pets = new LinkedList<>();
 
-        pets.push(Pet.cat().named("Felix"));
-        pets.push(Pet.dog().named("Fido"));
+		pets.push(Pet.cat().named("Felix"));
+		pets.push(Pet.dog().named("Fido"));
 
-        // TODO: Retrieve the last pet put on the list
-        Pet lastPet = null;
+		// TODO: Retrieve the last pet put on the list
+		Pet lastPet = pets.pop();
 
-        assertThat(lastPet.getName(),equalTo("Fido"));
-        assertThat(pets.size(), equalTo(1));
-    }
+		assertThat(lastPet.getName(), equalTo("Fido"));
+		assertThat(pets.size(), equalTo(1));
+	}
 
-    @Test
-    public void should_see_the_next_item_in_a_stack() {
+	@Test
+	public void should_see_the_next_item_in_a_stack() {
 
-        Deque<Pet> pets = new LinkedList<>();
+		Deque<Pet> pets = new LinkedList<>();
 
-        pets.push(Pet.cat().named("Felix"));
-        pets.push(Pet.dog().named("Fido"));
+		pets.push(Pet.cat().named("Felix"));
+		pets.push(Pet.dog().named("Fido"));
 
-        // TODO: Retrieve the last pet put on the list
-        Pet lastPet = null;
+		// TODO: Retrieve the last pet put on the list
 
-        assertThat(lastPet.getName(),equalTo("Fido"));
-        assertThat(pets.size(), equalTo(2));
-    }
+		Pet lastPet = pets.peek();
+
+		assertThat(lastPet.getName(), equalTo("Fido"));
+		assertThat(pets.size(), equalTo(2));
+	}
 }
