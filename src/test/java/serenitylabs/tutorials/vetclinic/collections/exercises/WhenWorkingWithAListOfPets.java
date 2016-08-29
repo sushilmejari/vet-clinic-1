@@ -1,13 +1,14 @@
 package serenitylabs.tutorials.vetclinic.collections.exercises;
 
-import org.junit.Test;
-import serenitylabs.tutorials.vetclinic.Pet;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.hasItem;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.hasItem;
+import org.junit.Test;
+
+import serenitylabs.tutorials.vetclinic.Pet;
 
 public class WhenWorkingWithAListOfPets {
 

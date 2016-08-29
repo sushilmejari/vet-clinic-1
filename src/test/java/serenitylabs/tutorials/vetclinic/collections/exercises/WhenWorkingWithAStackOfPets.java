@@ -1,13 +1,14 @@
 package serenitylabs.tutorials.vetclinic.collections.exercises;
 
-import org.junit.Test;
-import serenitylabs.tutorials.vetclinic.Pet;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
 
 import java.util.Deque;
 import java.util.LinkedList;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.equalTo;
+import org.junit.Test;
+
+import serenitylabs.tutorials.vetclinic.Pet;
 
 public class WhenWorkingWithAStackOfPets {
 

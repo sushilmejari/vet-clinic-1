@@ -1,13 +1,15 @@
 package serenitylabs.tutorials.vetclinic.collections.exercises;
 
-import org.junit.Test;
-import serenitylabs.tutorials.vetclinic.Pet;
-import static org.hamcrest.Matchers.*;
-import static org.junit.Assert.assertThat;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.Matchers.is;
+import static org.junit.Assert.assertThat;
+
 import java.util.LinkedList;
 import java.util.Queue;
+
+import org.junit.Test;
+
+import serenitylabs.tutorials.vetclinic.Pet;
 
 public class WhenWorkingWithAPetQueue {
 

@@ -70,4 +70,5 @@ public class Pet {
 	public int hashCode() {
 		return Objects.hashCode(name, breed);
 	}
+
 }

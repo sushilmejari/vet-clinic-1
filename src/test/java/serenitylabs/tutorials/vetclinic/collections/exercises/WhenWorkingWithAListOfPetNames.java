@@ -1,15 +1,17 @@
 package serenitylabs.tutorials.vetclinic.collections.exercises;
 
-import com.google.common.collect.Lists;
-import org.junit.Test;
+import static org.hamcrest.CoreMatchers.hasItems;
+import static org.junit.Assert.assertThat;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-import static org.hamcrest.CoreMatchers.hasItems;
-import static org.junit.Assert.assertThat;
+
+import org.junit.Test;
+
+import com.google.common.collect.Lists;
 
 public class WhenWorkingWithAListOfPetNames {
 

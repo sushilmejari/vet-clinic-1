@@ -1,11 +1,12 @@
 package serenitylabs.tutorials.vetclinic.collections.katas;
 
-import com.google.common.collect.ImmutableList;
-import serenitylabs.tutorials.vetclinic.Breed;
-import serenitylabs.tutorials.vetclinic.Pet;
-
 import java.util.List;
 import java.util.Random;
+
+import com.google.common.collect.ImmutableList;
+
+import serenitylabs.tutorials.vetclinic.Breed;
+import serenitylabs.tutorials.vetclinic.Pet;
 
 /**
  * A utility class to generate pet hotels with pets already booked
