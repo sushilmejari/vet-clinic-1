@@ -32,6 +32,7 @@ public class WhenBookingPetsIntoAPetHotel {
 		Pet fido = Pet.dog().named("Fido");
 		Pet felix = Pet.cat().named("Felix");
 		hotelBooking.appointment(fido, felix);
+		
 		List<Pet> pets = new ArrayList<>(hotelBooking.getPets().values());
 		assertThat(pets, contains(felix, fido));
 
@@ -59,9 +60,14 @@ public class WhenBookingPetsIntoAPetHotel {
 	}
 
 	@Test
-	@Ignore
 	public void should_be_able_to_obtain_a_booking_confirmation_when_we_check_in_a_pet() throws Exception {
-
+     //when
+		Hotel hotelBooking = new Hotel();
+		Pet fido = Pet.dog().named("Fido");
+		hotelBooking.appointment(fido);
+	//given
+		
+	//Then	
 	}
 
 	@Test
