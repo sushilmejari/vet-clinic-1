@@ -8,11 +8,16 @@ import java.util.Map;
 
 public class PetHotel {
 
-    public static final int MAXIMUM_PETS = 20;
+    private static final int MAXIMUM_PETS = 20;
 
     private final String hotelName;
     private final GuestList guestList;
     private final WaitingList waitingList;
+
+    @Override
+    public String toString() {
+        return hotelName;
+    }
 
     public PetHotel(String hotelName,
                     GuestList guestList,
@@ -21,6 +26,7 @@ public class PetHotel {
         this.guestList = guestList;
         this.waitingList = waitingList;
     }
+
 
     public PetHotel(String name) {
         this(name, new GuestList(), new WaitingList());
