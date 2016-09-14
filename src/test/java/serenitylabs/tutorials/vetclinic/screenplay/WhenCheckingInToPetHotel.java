@@ -6,8 +6,10 @@ import org.junit.runner.RunWith;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import serenitylabs.tutorials.vetclinic.model.Pet;
 import serenitylabs.tutorials.vetclinic.model.PetHotel;
+import serenitylabs.tutorials.vetclinic.screenplay.questions.TheRegisterGuests;
 import serenitylabs.tutorials.vetclinic.screenplay.tasks.CheckIn;
 
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.hasItem;
 
@@ -32,6 +34,7 @@ public class WhenCheckingInToPetHotel {
         );
         //Then
         assertThat(petHotel.getPets(), hasItem(ginger) );
+        petra.should(seeThat(TheRegisterGuests.in(petHotel),hasItem(ginger)));
     }
 
 }
