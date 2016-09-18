@@ -63,7 +63,7 @@ public class PetHotel {
 
     public void checkOut(Pet pet) {
         guestList.remove(pet);
-
+        System.out.println("guestList"+guestList);
         if (!waitingList.isEmpty()) {
             checkIn(waitingList.nextInLine());
         }
